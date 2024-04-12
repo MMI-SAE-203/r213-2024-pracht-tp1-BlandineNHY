@@ -6,4 +6,5 @@ const maVar2 = ref(1)
 
 <template>
 <p>Page Accueil</p>
+
 </template>
