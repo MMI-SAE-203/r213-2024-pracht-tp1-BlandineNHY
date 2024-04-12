@@ -1,5 +1,7 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <script setup lang="ts">
+import {ref} from 'vue'
+
 const sectionsData = [
   {
     label: 'bouton 1',
@@ -25,12 +27,17 @@ const sectionsData = [
     id modi accusantium ipsa eveniet accusamus. Tempora 
     quis corporis et nam.`
   }
-]</script>
+
+]
+const activeSection = ref(-1);
+
+</script>
 <template>
     <h1>ici dans boucle</h1>
     <section v-for="({ label, texte }, key) of sectionsData" :key="key">
   <pre class="font-mono">key : {{ key }}</pre>
   <pre class="font-mono">label : {{ label }}</pre>
-  <pre class="font-mono">texte : {{ texte }}</pre>
+    <button @pointerdown="activeSection=key ">{{ label }}</button>
+  <pre v-show="activeSection === key" class="font-mono">texte : {{ texte }}</pre>
 </section>
 </template>
