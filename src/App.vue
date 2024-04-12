@@ -7,12 +7,13 @@ onErrorCaptured((err, instance, info) => {
   return true
 })
 const menuIsOpen = ref(false)
+
 </script>
 
 
 <template>
   <header>
-      <button
+      <button @pointerdown="menuIsOpen = !menuIsOpen"
     aria-controls="mainNav"
     aria-expanded="true"
     class="rounded-full border-2 border-red-600 bg-red-300 px-2"
