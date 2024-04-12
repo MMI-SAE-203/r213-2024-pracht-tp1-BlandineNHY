@@ -20,7 +20,6 @@ const menuIsOpen = ref(false)
   >
     menu
   </button>
-  <!-- nav#mainNav>ul>li*3>a[href="#"]{item $} -->
   <Transition
   class="transition-transform duration-1000"
   enter-from-class="-translate-x-full"
